@@ -22,8 +22,9 @@ public class LoginTest {
 	@BeforeTest
 	public void beforeTest() {
 
+		String driverPath=System.getProperty("user.dir");
 		System.setProperty("webdriver.gecko.driver",
-				"E:\\Utility\\Selenium\\geckodriver-v0.26.0-win32\\geckodriver.exe");
+				driverPath +"\\driver\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.navigate().to("http://executeautomation.com/demosite/Login.html");
 		driver.manage().window().maximize();
